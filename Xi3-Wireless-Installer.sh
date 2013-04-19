@@ -8,8 +8,6 @@ echo 'pushd ./docs' >> /tmp/worker.sh
 echo 'echo "Xi3 Belkin N300 Wireless Driver Install script" > instructions-pt1' >> /tmp/worker.sh
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo "This script installs the Belkin N300 wireless drivers for Linux." >> instructions-pt1' >> /tmp/worker.sh
-echo 'echo "During the process, you will be prompted to install packages." >> instructions-pt1' >> /tmp/worker.sh
-echo 'echo "Please type y and hit enter to all the prompts." >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo "You may press any key in the terminal to continue installation." >> instructions-pt1' >> /tmp/worker.sh
@@ -20,13 +18,13 @@ echo 'read -n 1 -s' >> /tmp/worker.sh
 echo 'popd' >> /tmp/worker.sh
 
 echo 'pushd .' >> /tmp/worker.sh
-echo 'sudo zypper removerepo http://www2.ati.com/suse/11.4' >> /tmp/worker.sh
-echo 'sudo zypper install kernel-source=2.6.37.6-0.7' >> /tmp/worker.sh
+echo 'sudo zypper -n removerepo http://www2.ati.com/suse/11.4' >> /tmp/worker.sh
+echo 'sudo zypper -n install kernel-source=2.6.37.6-0.7' >> /tmp/worker.sh
 echo 'sudo wget ftp://WebUser:r3iZ6vJI@209.222.7.36/cn/wlan/RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip' >> /tmp/worker.sh
 echo 'sudo unzip RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip' >> /tmp/worker.sh
 echo 'cd RTL8188C_8192C_USB_linux_v3.4.4_4749.20121105/' >> /tmp/worker.sh
-echo 'sudo zypper install make' >> /tmp/worker.sh
-echo 'sudo zypper install gcc' >> /tmp/worker.sh
+echo 'sudo zypper -n install make' >> /tmp/worker.sh
+echo 'sudo zypper -n install gcc' >> /tmp/worker.sh
 echo 'sudo chmod 755 install.sh' >> /tmp/worker.sh
 echo 'sudo ./install.sh' >> /tmp/worker.sh
 echo 'popd' >> /tmp/worker.sh
