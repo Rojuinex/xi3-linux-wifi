@@ -9,7 +9,7 @@ echo 'echo "Xi3 Belkin N300 Wireless Driver Install script" > instructions-pt1' 
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo "This script installs the Belkin N300 wireless drivers for Linux." >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo "During the process, you will be prompted to install packages." >> instructions-pt1' >> /tmp/worker.sh
-echo 'echo "Please type y and hit enter to all the script to excecute." >> instructions-pt1' >> /tmp/worker.sh
+echo 'echo "Please type y and hit enter to all the prompts." >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo -e "\n" >> instructions-pt1' >> /tmp/worker.sh
 echo 'echo "You may press any key in the terminal to continue installation." >> instructions-pt1' >> /tmp/worker.sh
@@ -42,7 +42,7 @@ echo 'kwrite instructions-pt2 </dev/null &>/dev/null &' >> /tmp/worker.sh
 echo 'echo "Press any key to continue..."' >> /tmp/worker.sh
 echo 'read -n 1 -s' >> /tmp/worker.sh
 echo 'knetworkmanager </dev/null &>/dev/null &' >> /tmp/worker.sh
-echo 'echo -e "Please unplug the Ethernet cable at this time and connect to a wireless network from the Ethernet icon in the tray.\n\nYou can now press any key to close the installer." > instructions-pt3' >> /tmp/worker.sh
+echo 'echo -e "Please unplug the Ethernet cable at this time.\nClick the Ethernet port icon in the bottom right hand of the screen.\nSelect WLAN Interface Create Network Connection to connect to a wireless network.\n\nYou can now press any key in the terminal to close the installer." > instructions-pt3' >> /tmp/worker.sh
 echo 'kwrite instructions-pt3 </dev/null &>/dev/null &' >> /tmp/worker.sh
 echo 'popd' >> /tmp/worker.sh
 echo 'echo -e "Instillation finished\!\n\nPress any key to exit."' >> /tmp/worker.sh
