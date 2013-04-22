@@ -1,6 +1,4 @@
 rm -rf /tmp/worker.sh
-rm -rf /tmp/RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip
-mv -f ./RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip /tmp/RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip
 echo 'echo "This script needs administrator privileges.  The default password is xi3password"' > /tmp/worker.sh
 echo 'sudo rm -rf xi3-temp-wlinstall' >> /tmp/worker.sh
 echo 'mkdir xi3-temp-wlinstall' >> /tmp/worker.sh
@@ -22,7 +20,7 @@ echo 'popd' >> /tmp/worker.sh
 echo 'pushd .' >> /tmp/worker.sh
 echo 'sudo zypper -n removerepo http://www2.ati.com/suse/11.4' >> /tmp/worker.sh
 echo 'sudo zypper -n install kernel-source=2.6.37.6-0.7' >> /tmp/worker.sh
-echo 'sudo mv /tmp/RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip ./RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip' >> /tmp/worker.sh
+echo 'sudo wget https://github.com/rojuinex/xi3-linux-wifi/raw/master/RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip' >> /tmp/worker.sh
 echo 'sudo unzip RTL8192xC_USB_linux_v3.4.4_4749.20121105.zip' >> /tmp/worker.sh
 echo 'cd RTL8188C_8192C_USB_linux_v3.4.4_4749.20121105/' >> /tmp/worker.sh
 echo 'sudo zypper -n install make' >> /tmp/worker.sh
